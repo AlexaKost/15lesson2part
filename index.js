@@ -1,23 +1,23 @@
 'use strict'
 
 class First { 
-    constructor(text) {
+    constructor() {
         this.text = 'Привет, я метод родителя!'
     }
-        hello() {
-             console.log(this.text)
-        }   
+    hello() {
+        console.log(this.text)
+    }   
 }
-const first = new First();
 
 
 class Second extends First {
-    constructor(text) {
-        super(text);
-        this.text = 'А я наследуемый метод!'
-    } 
+    hello(){
+        
+        super.hello()
+
+        this.hello
+        console.log('А я наследуемый метод!')
+    }
 }
 let second = new Second();
-
-first.hello();
 second.hello();
